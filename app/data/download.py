@@ -26,7 +26,7 @@ def clean_up(path):
 def download(path):
     clean_up(path)
     wget.download(
-        "https://drive.google.com/uc?id=1WcKcGDThi0j3q9v_-pW3q0PuQL1wTSOK","./app/data"+ path+"/fra-eng.zip")
+        "https://drive.google.com/uc?id=1WcKcGDThi0j3q9v_-pW3q0PuQL1wTSOK", path+"/fra-eng.zip")
     file = zipfile.ZipFile(path+"/fra-eng.zip")
     file.extractall(path)
 
