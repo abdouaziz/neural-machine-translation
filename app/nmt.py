@@ -112,4 +112,13 @@ def str_to_tokens( sentence : str ):
     for word in words:
         tokens_list.append( eng_word_index[ word ] ) 
         
-    return pad_sequences( [tokens_list] , maxlen=max_input_length_sequences , padding='post')
+    return pad_sequences( [tokens_list] , maxlen=max_input_length_sequences , padding='post') 
+
+
+enc_model , dec_model = make_inference_models()
+
+enc_model.save( 'enc_model.h5' ) 
+dec_model.save( 'dec_model.h5' ) 
+model.save( 'model.h5' ) 
+
+
